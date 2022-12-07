@@ -1,5 +1,7 @@
+import {VocabWord} from "./VocabWord";
+
 export interface VocabList{
-    id: string,
+    id: string | undefined,
     name: string,
-    words: string[]
+    vocabWords: VocabWord[]
 }

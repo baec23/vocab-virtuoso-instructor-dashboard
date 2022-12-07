@@ -11,9 +11,9 @@ interface Props {
 function ClassSelector({classes, selectedClass, setSelectedClass}: Props) {
     return (
         <div>
-            {classes.map((studyClass) => (
-                <ClassSelectionCard key={studyClass.id} studyClass={studyClass}/>
-            ))}
+            {/*{classes.map((studyClass) => (*/}
+            {/*    <ClassSelectionCard key={studyClass.id} studyClass={studyClass}/>*/}
+            {/*))}*/}
         </div>
     );
 }
