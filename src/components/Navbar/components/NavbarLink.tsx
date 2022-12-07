@@ -3,13 +3,14 @@ import {Link} from "react-router-dom";
 
 interface Props {
     text: string,
-    route: string
+    route?: string
 }
 
 function NavbarLink({text, route}: Props) {
-    return (
-        <Link className="navbar__link" to={route}>{text}</Link>
-    );
+    if (route) {
+        return <Link className="navbar__link" to={route}>{text}</Link>
+    }
+    return <></>
 }
 
 export default NavbarLink;

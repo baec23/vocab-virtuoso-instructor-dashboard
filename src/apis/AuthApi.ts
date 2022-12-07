@@ -1,19 +1,34 @@
 import {api} from "./configs/axiosConfig";
 import {AxiosResponse} from "axios";
-import {User} from "../model/User";
-export const AuthApi = {
-    login: async function(username: string, password: string) : Promise<User>{
-        const response : AxiosResponse<User> = await api.request({
 
+interface LoginRequestParams {
+    username: string,
+    password: string
+}
+
+interface RegisterRequestParams {
+    username: string,
+    password: string,
+}
+
+export const AuthApi = {
+    login: async function ({username, password}: LoginRequestParams) {
+        const response = await api.request({
+            url: "/login",
+            method: "POST",
+            headers: {"Content-Type": "application/x-www-form-urlencoded"},
+            params: {
+                "username": username,
+                "password": password
+            }
         })
         return response.data;
     },
-    logout: async function(){
+    logout: async function () {
 
     },
-    register: async function(username: string, password: string){
-        const response : AxiosResponse<unknown> = await api.request({
-
-        })
+    register: async function (username: string, password: string) {
+        const response: AxiosResponse<unknown> = await api.request({})
     },
+
 }

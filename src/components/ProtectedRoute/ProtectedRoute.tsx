@@ -1,9 +1,9 @@
 import React from 'react';
-import {User} from "../../model/User";
+import {LoggedInUser} from "../../model/LoggedInUser";
 import {Navigate} from "react-router-dom";
 
 interface Props {
-    user?: User,
+    user?: LoggedInUser,
     children: JSX.Element | JSX.Element[]
 }
 

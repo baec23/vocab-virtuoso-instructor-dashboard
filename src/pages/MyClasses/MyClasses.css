@@ -1,0 +1,26 @@
+.my-classes{
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+}
+.my-classes__selector{
+    background-color: blue;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+.my-classes__details{
+    background-color: green;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+.my-classes__selector__card{
+    width:200px;
+    height: 100px;
+    color: #222222;
+    background-color: #F3EFE0;
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 5%;
+}

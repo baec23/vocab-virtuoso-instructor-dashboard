@@ -1,4 +1,4 @@
-export interface User {
+export interface LoggedInUser {
     userId: string,
     username: string,
     displayName: string,
